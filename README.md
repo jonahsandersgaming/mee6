@@ -7,6 +7,28 @@ We reccomend an ubuntu VM or OS this is because it is easiest to setup on.
 The first step is to install redis, inorder to do this you need to run:
 >sudo apt-get install redis-server
 
+The next thing we need to do is clone the repo from github:
+>git clone https://github.com/jtagt/mee6/
+
+The next step is to go into the direcotry where your chat-bot is, so run:
+>cd mee6/chat-bot/
+
+The next step is to install the dependencies, to do so you need to run:
+>sudo pip3 install -r requirements.txt
+
+The next step is to do the same thing execept we need to install the dependencies for the website:
+>cd mee6/website/
+
+Then after that we need to install it by running:
+>sudo pip3 install -r requirements.txt
+
+Now that all the dependencies are installed we can move onto confgiuring some of the variables.
+
+
+
+
+
+
 
 
 
