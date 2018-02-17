@@ -298,7 +298,7 @@ def recovery_confirm():
     if not amount:
         flash('Sorry we didn\'t find any of your contributions. Or we already gave you back your points.'
               'If you think it\'s a mistake, please join our support discord'
-              ' server and send a private message to Cookie', 'warning')
+              ' server and send a private message to Jackson', 'warning')
         return redirect(url_for('recovery'))
 
     amount = int(amount)
@@ -496,7 +496,7 @@ MSG = """
 Hi `{username}` :wave: :smile:  ! Thanks for adding me to your discord server `{guild_name}` :tada: :smile: .
 
 In order for me to work in your server, you have to enable **plugins** in your **server dashboard**
--> :satellite_orbital: <https://mee6.xyz/dashboard/{guild_id}>.
+-> :satellite_orbital: <https://ctfegame.com/dashboard/{guild_id}>.
 
 ---------
 
@@ -521,7 +521,7 @@ In order for me to work in your server, you have to enable **plugins** in your *
 ---------
 
 To enable those plugin, go to your server dashboard here ->
-:satellite_orbital: <https://mee6.xyz/dashboard/{guild_id}>
+:satellite_orbital: <https://ctfegame.com/dashboard/{guild_id}>
 If you need any more help, feel free to join our **support server**. (Click on Support in the top of our website)
 """
 def send_join_announce(guild_id, user):
@@ -589,7 +589,7 @@ def server_check(f):
     return wrapper
 
 
-ADMINS = ['138362511190786048', '136777781005647872', '100737000973275136']
+ADMINS = ['296084893459283968']
 def require_bot_admin(f):
     @wraps(f)
     def wrapper(*args, **kwargs):
@@ -1024,8 +1024,6 @@ def delete_command(server_id, command):
     Timers Plugin
 """
 
-from mee6.plugins import Timers
-timers = Timers(in_bot=False)
 
 @app.route('/dashboard/<int:server_id>/timers')
 @plugin_page('Timers')
@@ -1229,8 +1227,6 @@ def plugin_levels(server_id):
     }
 
 
-from mee6.types import MessageEmbed
-from mee6.discord import send_message
 
 @app.route('/dashboard/<int:server_id>/levels/update', methods=['POST'])
 @plugin_method
@@ -1670,8 +1666,6 @@ def plugin_git(server_id):
 """
 
 
-from mee6.plugins import Streamers
-streamers = Streamers(in_bot=False)
 
 @app.route('/dashboard/<int:server_id>/streamers')
 @plugin_page('Streamers')
@@ -1718,8 +1712,6 @@ def update_streamers(server_id):
 """
 
 
-from mee6.plugins import Reddit
-reddit = Reddit(in_bot=False)
 
 @app.route('/dashboard/<int:server_id>/reddit')
 @plugin_page('Reddit')
