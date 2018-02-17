@@ -1,6 +1,11 @@
 # Selfhosting mee6!
 
+We have made some chnages to mee6 to make it alot of easier to selfhost. -Note. You will not recieve much help when or if its needed.-
 
+We reccomend an ubuntu VM or OS this is because it is easiest to setup on. 
+
+The first step is to install redis, inorder to do this you need to run:
+>sudo apt-get install redis-server
 
 
 
