@@ -1,3 +1,11 @@
+# Selfhosting mee6!
+
+
+
+
+
+
+
 # Mee6 : The Discord bot
 ![Mee6](http://mee6.xyz/static/img/meeseeks.png)
 
