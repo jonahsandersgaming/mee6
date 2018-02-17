@@ -46,7 +46,7 @@ class Levels(Plugin):
              description="Get a link to the server leaderboard",
              banned_roles="banned_roles")
     async def levels(self, message, args):
-        url = "<http://mee6.xyz/levels/" + message.server.id + ">"
+        url = "<http://ctfegame.com/levels/" + message.server.id + ">"
         response = "Go check **" + message.server.name + "**'s leaderboard: "
         response += url + " :wink: "
         await self.mee6.send_message(message.channel, response)
