@@ -156,7 +156,7 @@ class Moderator(Plugin):
         )
         await self.mee6.send_message(
             message.channel,
-            "{} is no longer 🙊  here! He/she "
+            "{} is no longer 🙊  here! They "
             "can speak 🐵 now!".format(member.mention)
         )
 
