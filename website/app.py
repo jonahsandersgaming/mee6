@@ -1431,7 +1431,9 @@ def reset_player(server_id, player_id):
     ## Send update to webhook
     embed = MessageEmbed()
     embed.title = 'XP reset {}'.format(server_id)
-
+"""having an issue with MessageEmbed (affecting the level/ranking system)
+also affecting the system that resets score or ranks within servers
+"""
     user = get_user(session['api_token'])
     for k, v in user.items():
         if type(v) == str:
@@ -1463,7 +1465,7 @@ def reset_all_players(server_id):
     ## Send update to webhook
     embed = MessageEmbed()
     embed.title = 'XP reset ALL {}'.format(server_id)
-
+"""issue wuth MessageEmbed"""
     user = get_user(session['api_token'])
     for k, v in user.items():
         if type(v) == str:
