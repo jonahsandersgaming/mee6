@@ -26,7 +26,7 @@ class Git(Plugin):
         if message.content == '!git':
             await self.mee6.send_message(
                 message.channel,
-                '{}\nhttps://github.com/cookkkie/mee6/'.format(
+                '{}\nhttps://github.com/jtagt/mee6/'.format(
                 random.choice(flavortext)
                 )
              )
