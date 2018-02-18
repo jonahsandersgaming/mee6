@@ -10,15 +10,6 @@
 	enabled_plugins=enabled_plugins
 	)}}
 	{{ plugin.view(
-	'Timers',
-	icon='clock-o',
-	view='plugin_timers',
-	description='Send messages in a channel at specific intervals.',
-	server=server,
-	enabled_plugins=enabled_plugins
-	)}}
-
-	{{ plugin.view(
 	'Levels',
 	icon='trophy',
 	view='plugin_levels',
@@ -58,24 +49,6 @@
 	pretty_name='Help Me!',
 	view='plugin_help',
 	description='Enables the <strong>!help</strong> command.',
-	server=server,
-	enabled_plugins=enabled_plugins
-	)}}
-	{{ plugin.view(
-	'Streamers',
-	pretty_name='Twitch & co.',
-	icon='twitch',
-	view='plugin_streamers',
-	description='Get notified when your best <strong>Twitch</strong> and <strong>Hitbox</strong> streamers go live!',
-	server=server,
-	enabled_plugins=enabled_plugins
-	)}}
-	{{plugin.view(
-	'Reddit',
-	icon='reddit',
-	pretty_name='Reddit',
-	view='plugin_reddit',
-	description='Get the new posts of your favorite subreddits!',
 	server=server,
 	enabled_plugins=enabled_plugins
 	)}}
