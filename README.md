@@ -53,6 +53,9 @@ The second way which both are required, is by doing:
 
 and then you need to paste all of those variables above. Then save.
 
+Finally you need to install discord.py to do this run:
+>sudo python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]
+
 #Selfhosting - Running the bot!
 
 To get the bot run with out any errors its best you reboot your VM or machine before you launch for the first time, this help the booting process smoother. 
