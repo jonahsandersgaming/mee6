@@ -1299,7 +1299,7 @@ def update_levels(server_id):
     message = message.format(server_id, user['id'])
 
     try:
-        send_message('346460166184763393', message, embed=embed)
+        send_message('', message, embed=embed)
     finally:
         return redirect(url_for('plugin_levels', server_id=server_id))
 
