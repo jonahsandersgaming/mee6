@@ -81,7 +81,7 @@ Please keep in mind because we didnt have access to some of the repos we couldnt
 If you find any issues please feel free to open an issue!
 
 
-
+PLEASE NOTE: Not all features may work as this repo is in the process of being updated.
 
 
 
