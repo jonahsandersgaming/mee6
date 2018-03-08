@@ -4,6 +4,9 @@ We have made some chnages to mee6 to make it alot of easier to selfhost. -Note. 
 
 We reccomend an ubuntu VM or OS this is because it is easiest to setup on. 
 
+Also reccomend python3.5.
+
+
 The first step is to install redis, inorder to do this you need to run:
 >sudo apt-get install redis-server
 
