@@ -1,5 +1,7 @@
 # Selfhosting - Setup
 
+WolfGang
+
 We have made some chnages to mee6 to make it alot of easier to selfhost. -Note. You will not recieve much help when or if its needed.-
 
 We reccomend an ubuntu VM or OS this is because it is easiest to setup on. 
