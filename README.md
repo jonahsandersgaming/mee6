@@ -1,6 +1,6 @@
 # Selfhosting - Setup
 
-WolfGang
+Made possible by Sil and Loading User...
 
 We have made some chnages to mee6 to make it alot of easier to selfhost. -Note. You will not recieve much help when or if its needed.-
 
