@@ -15,15 +15,9 @@ the first step is to install redis with `apt`:
 The next thing we need to do is clone this repo from github:
 >git clone https://github.com/laggycomputer/mee6/
 
-The next step is to go into the direcotry where your chat-bot is, so run:
->cd mee6/chat-bot/
-
-The next step is to install the dependencies, to do so you need to run:
->pip3 install -r requirements.txt
-
-The next step is to do the same thing execept we need to install the dependencies for the website:
->cd ../website/
->pip3 install -r requirements.txt
+I have included a program to install the requirements, run it with:
+>cd mee6
+>sh installRequire.sh
 
 Finally you need to install discord.py:
 >python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]
