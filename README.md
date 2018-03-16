@@ -25,6 +25,7 @@ For the `chat-bot`:
 # Download and Installation, way 2
 Download `install.sh` from this repo, and run it:
 >sh install.sh
+You can then remove it with `rm install.sh`.
 
 # Config
 Now that all the dependencies are installed we can move onto confgiuring some of the variables.
