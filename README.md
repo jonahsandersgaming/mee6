@@ -21,6 +21,9 @@ The next step is to install the dependencies, to do so you need to run:
 The next step is to do the same thing execept we need to install the dependencies for the website:
 >cd ../website/
 
+Finally you need to install discord.py:
+sudo python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]
+
 Then after that we need to install it by running:
 >sudo pip3 install -r requirements.txt
 
