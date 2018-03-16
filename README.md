@@ -1,5 +1,6 @@
 For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine).
 
+You can install automatically or manually, see below.
 # Download and Installation, way 1
 
 Install python3 and pip3 and redis:
