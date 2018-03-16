@@ -1,10 +1,5 @@
 For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine).
 
-We will assume:
-1. You have admin permissions on your system.
-2. You run through this tutorial as root.
-3. You clone the below repo into root's directory, `/root`.
-
 # Download and Installation, way 1
 
 Install python3 and pip3 and redis:
