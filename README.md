@@ -18,7 +18,7 @@ The next thing we need to do is clone this repo from github:
 >git clone https://github.com/laggycomputer/mee6/
 
 I have included a program to install the requirements, `cd` into the mee6 install location, and run it:
->cd mee6 && sh installRequire.sh
+>cd mee6 && sh install.sh
 
 Now that all the dependencies are installed we can move onto confgiuring some of the variables.
 
