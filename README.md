@@ -1,5 +1,6 @@
 # Selfhosting - Setup
 
+THIS IS MANUAL INSTALLATION PLEASE USE THE SHELL SCRIPT FOR AN AUTOMATED INSTALL.
 
 For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine), and the packages python3 and pip3.
 
