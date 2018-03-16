@@ -5,10 +5,10 @@ We will assume:
 2. You run through this tutorial as root.
 3. You clone the below repo into root's directory, `/root`.
 
-# Download and Installation
+# Download and Installation, way 1
 
-Install python3 and pip3:
->apt install python3 python3-pip
+Install python3 and pip3 and redis:
+>apt install python3 python3-pip redis-server
 
 Then, discord.py:
 >python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]
@@ -17,9 +17,16 @@ Then, discord.py:
 The next thing we need to do is clone this repo from github:
 >git clone https://github.com/laggycomputer/mee6/
 
-I have included a program to install the requirements, `cd` into the mee6 install location, and run it:
->cd mee6 && sh install.sh
+Install the requirements:
+>cd mee6/website && pip3 install -r requirements.txt
+For the `chat-bot`:
+>cd ../chat-bot && pip3 install -r requirements.txt
 
+# Download and Installation, way 2
+Download `install.sh` from this repo, and run it:
+>sh install.sh
+
+# Config
 Now that all the dependencies are installed we can move onto confgiuring some of the variables.
 
 export REDIS_URL=redis://localhost
