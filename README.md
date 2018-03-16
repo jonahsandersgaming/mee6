@@ -1,31 +1,35 @@
 # Selfhosting - Setup
 
 
-For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine), and the packages python3 and pip3.
+For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine).
 
-Ensure you have admin permissions on your Ubuntu system.
+We will assume:
+1. You have admin permissions on your system.
+2. You run through this tutorial as root.
+3. You clone this repo into root's directory, `/root`.
 
 For this tutorial, 
-The first step is to install redis with `apt`:
->sudo apt-get install redis-server
+the first step is to install redis with `apt`:
+>apt install redis-server
 
 The next thing we need to do is clone this repo from github:
->git clone https://github.com/jtagt/mee6/
+>git clone https://github.com/laggycomputer/mee6/
 
 The next step is to go into the direcotry where your chat-bot is, so run:
 >cd mee6/chat-bot/
 
 The next step is to install the dependencies, to do so you need to run:
->sudo pip3 install -r requirements.txt
+>pip3 install -r requirements.txt
 
 The next step is to do the same thing execept we need to install the dependencies for the website:
 >cd ../website/
+>pip3 install -r requirements.txt
 
 Finally you need to install discord.py:
-sudo python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]
+>python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]
 
 Then after that we need to install it by running:
->sudo pip3 install -r requirements.txt
+>pip3 install -r requirements.txt
 
 Now that all the dependencies are installed we can move onto confgiuring some of the variables.
 
