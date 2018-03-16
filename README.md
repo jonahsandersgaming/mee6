@@ -7,10 +7,10 @@ We will assume:
 
 # Download and Installation
 
-First install redis...
+First install redis, python 3, and pip3:
 >apt install redis-server
-Then python3 and pip3, the interpreter and package index for Python 3, if not installed already:
 >apt install python3 python3-pip
+
 Finally, discord.py:
 >python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]
 
