@@ -1,12 +1,11 @@
-# Selfhosting - Setup
-
-
 For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine).
 
 We will assume:
 1. You have admin permissions on your system.
 2. You run through this tutorial as root.
-3. You clone this repo into root's directory, `/root`.
+3. You clone the below repo into root's directory, `/root`.
+
+# Download and Installation
 
 First install redis...
 >apt install redis-server
@@ -52,20 +51,22 @@ Press Control-V to go to the end of the document (don't remove anything), and pa
 (To exit, press Control-X, then Y then Enter.)
 
 
-#Selfhosting - Running the bot!
+# Running Mee6
 
 To smooth out the booting process, I recommend rebooting your machine at this point.
 
-To start the bot, go to your mee6 repo location (should be a folder called mee6), and do:
->cd mee6/chat-bot/ && python3 bot.py
+Login as `root` on boot:
+sudo -i
+Then start the bot, go to your mee6 repo location:
+>cd ~/mee6/chat-bot/ && python3 bot.py
 
-
-Open another instance of Terminal, navigate to the mee6 folder, and execute this python file to start the website:
->cd mee6/website/ && python3 app.py
+Open another instance of Terminal (login as root there too), navigate to the mee6 folder, and execute this python file to start the website:
+>cd ~/mee6/website/ && python3 app.py
 
 Do note that you may have to reboot after closing the website so that it works again, 
 as python does not automatically unbind fron the domain.
-#Conclusion
+
+# Conclusion
 
 Sadly, I am unable to find enough source code to make everything work, but I do my best!
 
