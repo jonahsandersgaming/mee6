@@ -57,8 +57,6 @@ The second way is to use:
 Press Control-V to go to the end of the document (don't remove anything), and paste in these variables. Save and exit.
 (To exit, press Control-X, then Y then Enter.)
 
-Finally you need to install discord.py:
->python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]
 
 #Selfhosting - Running the bot!
 
