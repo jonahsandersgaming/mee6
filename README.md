@@ -1,3 +1,4 @@
+
 For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine).
 
 You can install automatically or manually, see below.
@@ -29,11 +30,15 @@ Now that all the dependencies are installed we can move onto confgiuring some of
 export REDIS_URL=redis://localhost
 
 export OAUTH2_CLIENT_ID=Discord client ID for your bot
+
 export OAUTH2_CLIENT_SECRET=your Discord bot's client secret
+
 export MEE6_TOKEN=Your Discord bot token
+
 export OAUTH2_REDIRECT_URI=http://localhost:5000/confirm_login (change to your domain if needed.)
 
 export MAL_USERNAME=username for account on http://myanimelist.net
+
 export MAL_PASSWORD=password for above site
 
 export TWITCH_CLIENT_ID=client ID for a twitch app
@@ -44,10 +49,8 @@ export SECRET_KEY=1234 ***Change to a random 4-digit value!***
 
 
 If you are fine with not having some features work, simply remove the variable value and leave the empty assignment.
-We will implement these variables two ways, as a failsafe.
 
-The first way is to paste the above variables into the command line.
-The second way is to use:
+Now do:
 >cd ~ && nano .bashrc
 
 Press Control-V to go to the end of the document (don't remove anything), and paste in these variables. Save and exit.
