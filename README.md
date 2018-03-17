@@ -25,7 +25,12 @@ For the `chat-bot`:
 
 # Download and Installation, way 2
 Download `install.sh` from this repo, and run it:
->sh install.sh
+
+But first we need to make this shell script executable. To do this run:
+>chmod 755 install.sh
+
+To run the shell script run:
+>./install.sh
 You can then remove it with `rm install.sh`.
 
 # Config
