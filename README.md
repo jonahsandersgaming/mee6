@@ -11,7 +11,7 @@ Then, discord.py:
 
 
 The next thing we need to do is clone this repo from github:
->git clone https://github.com/laggycomputer/mee6/
+>git clone https://github.com/jtagt/mee6/
 
 Install the requirements:
 >cd mee6/website && pip3 install -r requirements.txt
