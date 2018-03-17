@@ -31,6 +31,7 @@ But first we need to make this shell script executable. To do this run:
 
 To run the shell script run:
 >./install.sh
+
 You can then remove it with `rm install.sh`.
 
 # Config
