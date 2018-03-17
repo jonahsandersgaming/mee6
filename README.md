@@ -44,10 +44,8 @@ export SECRET_KEY=1234 ***Change to a random 4-digit value!***
 
 
 If you are fine with not having some features work, simply remove the variable value and leave the empty assignment.
-We will implement these variables two ways, as a failsafe.
 
-The first way is to paste the above variables into the command line.
-The second way is to use:
+Now do:
 >cd ~ && nano .bashrc
 
 Press Control-V to go to the end of the document (don't remove anything), and paste in these variables. Save and exit.
