@@ -1,6 +1,8 @@
 
 For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine).
 
+ONLY WORKS ON PYTHON3.5!
+
 You can install automatically or manually, see below.
 # Download and Installation, way 1
 
