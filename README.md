@@ -34,6 +34,7 @@ export MEE6_TOKEN=Your Discord bot token
 export OAUTH2_REDIRECT_URI=http://localhost:5000/confirm_login (change to your domain if needed.)
 
 export MAL_USERNAME=username for account on http://myanimelist.net
+
 export MAL_PASSWORD=password for above site
 
 export TWITCH_CLIENT_ID=client ID for a twitch app
