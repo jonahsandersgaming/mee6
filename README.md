@@ -16,6 +16,7 @@ The next thing we need to do is clone this repo from github:
 
 Install the requirements:
 >cd mee6/website && pip3 install -r requirements.txt
+
 For the `chat-bot`:
 >cd ../chat-bot && pip3 install -r requirements.txt
 
