@@ -55,7 +55,7 @@ export TWITCH_CLIENT_ID=client ID for a twitch app
 
 export GOOGLE_API_KEY=a youtube api key
 
-export SECRET_KEY=1234 ***Change to a random 4-digit value!***
+export SECRET_KEY=1234 ***Change to a random string! preferable longer then this***
 
 
 If you are fine with not having some features work, simply remove the variable value and leave the empty assignment.
