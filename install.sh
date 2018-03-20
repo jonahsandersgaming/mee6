@@ -4,7 +4,6 @@ echo Starting installation...
 apt-get update  # To get the latest package lists 
 #Installing required packages:
 apt-get install git 
-apt-get install python3
 apt-get install python3-pip
 apt-get install redis-server -y 
 #Git cloning

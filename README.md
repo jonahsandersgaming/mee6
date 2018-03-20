@@ -1,5 +1,6 @@
 For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine).
 
+
 NOTE: This only words with Python 3.5, and **NOT PYTHON2 OR PYTHON 3.4**
 
 You can install automatically or manually, see below.
@@ -26,8 +27,23 @@ Download `install.sh` from this repo.
 Use `chmod` to make the installer executable:
 `chmod 755 install.sh`
 Then run it:
-
 `./install.sh`
+
+Install the requirements:
+>cd mee6/website && pip3 install -r requirements.txt
+
+For the `chat-bot`:
+
+>cd ../chat-bot && pip3 install -r requirements.txt
+
+# Download and Installation, way 2
+Download `install.sh` from this repo, and run it:
+
+But first we need to make this shell script executable. To do this run:
+>chmod 755 install.sh
+
+To run the shell script run:
+>./install.sh
 
 You can then remove it with `rm install.sh`.
 
