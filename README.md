@@ -1,6 +1,6 @@
-
 For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine).
 
+NOTE: This only words with Python 3.5, and **NOT PYTHON2 OR PYTHON 3.4**
 You can install automatically or manually, see below.
 # Download and Installation, way 1
 
@@ -12,17 +12,23 @@ Then, discord.py:
 
 
 The next thing we need to do is clone this repo from github:
->git clone https://github.com/laggycomputer/mee6/
+>git clone https://github.com/jtagt/mee6/
 
 Install the requirements:
 >cd mee6/website && pip3 install -r requirements.txt
 
 For the `chat-bot`:
+
 >cd ../chat-bot && pip3 install -r requirements.txt
 
 # Download and Installation, way 2
-Download `install.sh` from this repo, and run it:
->sh install.sh
+Download `install.sh` from this repo.
+Use `chmod` to make the installer executable:
+`chmod 755 install.sh`
+
+Then run it:
+>./install.sh
+
 You can then remove it with `rm install.sh`.
 
 # Config
@@ -46,7 +52,7 @@ export TWITCH_CLIENT_ID=client ID for a twitch app
 
 export GOOGLE_API_KEY=a youtube api key
 
-export SECRET_KEY=1234 ***Change to a random 4-digit value!***
+export SECRET_KEY=1111 ***Change to a longer code, preferably longer than this***
 
 
 If you are fine with not having some features work, simply remove the variable value and leave the empty assignment.
