@@ -5,30 +5,23 @@ You can install automatically or manually, see below.
 # Download and Installation, way 1
 
 Install python3 and pip3 and redis:
->apt install python3 python3-pip redis-server
-
+`apt install python3 python3-pip redis-server`
 Then, discord.py:
->python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]
-
+`python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]`
 
 The next thing we need to do is clone this repo from github:
->git clone https://github.com/jtagt/mee6/
-
+`git clone https://github.com/jtagt/mee6/`
 Install the requirements:
->cd mee6/website && pip3 install -r requirements.txt
-
+`cd mee6/website && pip3 install -r requirements.txt`
 For the `chat-bot`:
-
->cd ../chat-bot && pip3 install -r requirements.txt
+`cd ../chat-bot && pip3 install -r requirements.txt`
 
 # Download and Installation, way 2
 Download `install.sh` from this repo.
 Use `chmod` to make the installer executable:
 `chmod 755 install.sh`
-
 Then run it:
->./install.sh
-
+`./install.sh`
 You can then remove it with `rm install.sh`.
 
 # Config
@@ -54,12 +47,10 @@ export GOOGLE_API_KEY=a youtube api key
 
 export SECRET_KEY=1111 ***Change to a longer code, preferably longer than this***
 
-
 If you are fine with not having some features work, simply remove the variable value and leave the empty assignment.
 
 Now do:
->cd ~ && nano .bashrc
-
+`cd ~ && nano .bashrc`
 Press Control-V to go to the end of the document (don't remove anything), and paste in these variables. Save and exit.
 (To exit, press Control-X, then Y then Enter.)
 
@@ -71,10 +62,10 @@ To smooth out the booting process, I recommend rebooting your machine at this po
 Login as `root` on boot:
 sudo -i
 Then start the bot, go to your mee6 repo location:
->cd ~/mee6/chat-bot/ && python3 bot.py
+`cd ~/mee6/chat-bot/ && python3 bot.py`
 
 Open another instance of Terminal (login as root there too), navigate to the mee6 folder, and execute this python file to start the website:
->cd ~/mee6/website/ && python3 app.py
+`cd ~/mee6/website/ && python3 app.py`
 
 Do note that you may have to reboot after closing the website so that it works again, 
 as python does not automatically unbind fron the domain.
@@ -82,9 +73,6 @@ as python does not automatically unbind fron the domain.
 # Conclusion
 
 Sadly, I am unable to find enough source code to make everything work, but I do my best!
-
 If you find any issues please feel free to open an issue!
-
-
 PLEASE NOTE: Not all features may work as this repo is in the process of being updated.
 
