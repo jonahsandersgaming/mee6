@@ -57,6 +57,7 @@ export SECRET_KEY=1111 ***Change to a longer code, preferably longer than this**
 If you are fine with not having some features work, simply remove the variable value and leave the empty assignment.
 
 Now do:
+
 `cd ~ && nano .bashrc`
 
 Press Control-V to go to the end of the document (don't remove anything), and paste in these variables. Save and exit.
