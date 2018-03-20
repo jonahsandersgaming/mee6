@@ -7,22 +7,28 @@ You can install automatically or manually, see below.
 
 Install python3 and pip3 and redis:
 `apt install python3 python3-pip redis-server`
+
 Then, discord.py:
 `python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]`
 
 The next thing we need to do is clone this repo from github:
 `git clone https://github.com/jtagt/mee6/`
+
 Install the requirements:
 `cd mee6/website && pip3 install -r requirements.txt`
+
 For the `chat-bot`:
 `cd ../chat-bot && pip3 install -r requirements.txt`
 
 # Download and Installation, way 2
 Download `install.sh` from this repo.
+
 Use `chmod` to make the installer executable:
 `chmod 755 install.sh`
 Then run it:
+
 `./install.sh`
+
 You can then remove it with `rm install.sh`.
 
 # Config
@@ -52,6 +58,7 @@ If you are fine with not having some features work, simply remove the variable v
 
 Now do:
 `cd ~ && nano .bashrc`
+
 Press Control-V to go to the end of the document (don't remove anything), and paste in these variables. Save and exit.
 (To exit, press Control-X, then Y then Enter.)
 
@@ -62,6 +69,7 @@ To smooth out the booting process, I recommend rebooting your machine at this po
 
 Login as `root` on boot:
 sudo -i
+
 Then start the bot, go to your mee6 repo location:
 `cd ~/mee6/chat-bot/ && python3 bot.py`
 
