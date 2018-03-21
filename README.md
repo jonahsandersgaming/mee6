@@ -1,6 +1,5 @@
 For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine).
 
-
 NOTE: This only words with Python 3.5 or later, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2 OR PYTHON 3.4**
 
 You can install automatically or manually, see below.
