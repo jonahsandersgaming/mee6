@@ -83,9 +83,11 @@ Login as `root` on boot:
 sudo -i
 
 Then start the bot, go to your mee6 repo location:
+
 `cd ~/mee6/chat-bot/ && python3 bot.py`
 
 Open another instance of Terminal (login as root there too), navigate to the mee6 folder, and execute this python file to start the website:
+
 `cd ~/mee6/website/ && python3 app.py`
 
 Do note that you may have to reboot after closing the website so that it works again, 
