@@ -1,4 +1,5 @@
 
+
 For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine).
 
 NOTE: This only words with Python 3.5/3.6 or later, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2 OR PYTHON 3.4**
@@ -34,9 +35,12 @@ Use `chmod` to make the installer executable:
 `chmod 755 install.sh`
 
 Then run it:
+
 `./install.sh`
 
-You can then remove it with `rm install.sh`.
+You can then remove it with:
+
+`rm install.sh`.
 
 # Config
 Now that all the dependencies are installed we can move onto confgiuring some of the variables.
