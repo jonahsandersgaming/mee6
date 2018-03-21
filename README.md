@@ -24,16 +24,11 @@ For the `chat-bot`:
 Download `install.sh` from this repo.
 
 Use `chmod` to make the installer executable:
+
 `chmod 755 install.sh`
+
 Then run it:
 `./install.sh`
-
-Install the requirements:
->cd mee6/website && pip3 install -r requirements.txt
-
-For the `chat-bot`:
-
->cd ../chat-bot && pip3 install -r requirements.txt
 
 You can then remove it with `rm install.sh`.
 
