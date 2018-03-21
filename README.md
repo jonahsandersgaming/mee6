@@ -7,18 +7,23 @@ You can install automatically or manually, see below.
 # Download and Installation, way 1
 
 Install python3 and pip3 and redis:
+
 `apt install python3 python3-pip redis-server`
 
 Then, discord.py:
+
 `python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]`
 
 The next thing we need to do is clone this repo from github:
+
 `git clone https://github.com/jtagt/mee6/`
 
-Install the requirements:
+Then, we need `pip` to install the necessary packages for the website script and the chat script. First, we will install for the website script:
+
 `cd mee6/website && pip3 install -r requirements.txt`
 
-For the `chat-bot`:
+Then we will do the same command, but for the chat script:
+
 `cd ../chat-bot && pip3 install -r requirements.txt`
 
 # Download and Installation, way 2
