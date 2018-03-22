@@ -94,12 +94,11 @@ server {
         listen 80;
         server_name www.example.com example.com;
         root /var/www/html/;
-
+        
         location / {
             proxy_pass http://localhost:5000/;
             include /etc/nginx/proxy_params;
         }
-
     }
 ```
 Now save and exit.
