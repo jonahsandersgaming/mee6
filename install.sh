@@ -7,6 +7,7 @@ apt-get update  # To get the latest package lists
 apt-get install git 
 apt-get install python3-pip
 apt-get install redis-server -y 
+apt-get install nginx
 
 #Git cloning
 cd ~/
