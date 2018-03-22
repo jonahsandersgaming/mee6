@@ -1,7 +1,6 @@
 
-
-
 NOTE: This only words with Python 3.5 or later, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2 OR PYTHON 3.4**
+
 We will be using Ubuntu 14 for this tutorial, but linux systems that use `apt` package manager like Mint, CentOS, Debian, and Raspbian should work fine.
 
 There's nothing wrong with using a virtual machine.
