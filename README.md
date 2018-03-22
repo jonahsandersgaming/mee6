@@ -8,7 +8,7 @@ There's nothing wrong with using a virtual machine.
 You can install automatically or manually, see below.
 # Manual installation
 
-Install python3 and pip3 and redis and nginx:
+Install python3, pip3, redis, and nginx:
 
 `apt install python3 python3-pip redis-server nginx`
 
