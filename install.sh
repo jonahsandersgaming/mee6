@@ -5,10 +5,7 @@ echo Starting installation...
 apt-get update  # To get the latest package lists 
 
 #Installing required packages:
-apt-get install -y git 
-apt-get install -y python3-pip
-apt-get install -y redis-server 
-apt-get install -y nginx 
+apt-get install -y git python3-pip redis-server nginx 
 
 #Git cloning
 cd ~/
