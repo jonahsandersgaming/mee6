@@ -108,17 +108,18 @@ Then to configure the final step you need to run,
 
 Then you need to paste,
 
-server {
-    listen 80;
-    server_name www.example.com example.com;
-    root /var/www/html/;
 
-    location / {
-        proxy_pass http://localhost:5000/;
-        include /etc/nginx/proxy_params;
+    server {
+        listen 80;
+        server_name www.example.com example.com;
+        root /var/www/html/;
+
+        location / {
+            proxy_pass http://localhost:5000/;
+            include /etc/nginx/proxy_params;
+        }
+
     }
-
-}
 
 Now save and exit.
 (To exit, press Control-X, then Y then Enter.)
