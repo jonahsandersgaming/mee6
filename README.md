@@ -1,6 +1,5 @@
 
 
-For this tutorial, we will use a Linux system with `apt` package manager, or a virtual machine with Linux.
 
 NOTE: This only words with Python 3.5 or later, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2 OR PYTHON 3.4**
 We will be using Ubuntu 14 for this tutorial, but linux systems that use `apt` package manager like Mint, CentOS, Debian, and Raspbian should work fine.
