@@ -1,5 +1,5 @@
 
-NOTE: This only words with Python 3.5 or later, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2 OR PYTHON 3.4**
+NOTE: This only words with Python 3.5/3.6, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2 OR PYTHON 3.4**
 
 We will be using Ubuntu 14 for this tutorial, but linux systems that use `apt` package manager like Mint, CentOS, Debian, and Raspbian should work fine.
 
@@ -10,7 +10,7 @@ You can install automatically or manually, see below.
 
 Install python3, pip3, redis, and nginx:
 
-`apt install python3 python3-pip redis-server nginx`
+`apt install -y python3 python3-pip redis-server nginx`
 
 Then, discord.py:
 
@@ -73,12 +73,12 @@ Now do:
 
 `cd ~ && nano .bashrc`
 
-Press Control-V to go to the end of the document (don't remove anything), and paste in these variables. Save and exit.
+Press Control-V to go to the end of the document (don't remove anything), and **paste in these variables**. Save and exit.
 (To exit, press Control-X, then Y then Enter.)
 
 # Website Config
 
-We need to proxy behing nginx to access the site from a mobile device (where browsers don't allow `localhost` links). To do so, we need to edit the nginx config file included in the `nginx` package, which you either installed manually or with the installer.
+We need to proxy behing nginx to access the site from a mobile device (where browsers cannot access something thats only avaliable to that machine). To do so, we need to edit the nginx config file included in the `nginx` package, which you either installed manually or with the installer.
 
 First remove the default enabled sites on nginx:
 
@@ -107,7 +107,7 @@ Now save and exit.
 Now restart the `nginx` service:
 `service nginx restart`
 
-Now, the dashboard is accessible at your internal ip address, which should be something like `192.168.1.xx` or `192.168.x.xx`.
+Now, the dashboard is accessible at your machines local ip address, which should be something like `192.168.1.xx` or `192.168.x.xx`.
 
 To make it accessable to the outside world you must port forward. Visit this website for help on port fowarding:
 
@@ -132,44 +132,13 @@ Open another instance of Terminal (login as root there too), navigate to the mee
 `cd ~/mee6/website/ && python3 app.py`
 
 Do note that you may have to reboot after closing the website so that it works again, 
-as python does not automatically unbind fron the domain.
+as python does not automatically unbind from the port.
 
-# Website
-
-Inorder for you to access the site from lets say your mobile device you can't just type in localhost:5000. Therefore we need to proxy behind nginx. To do so we need to configure the config file that you would have installed when you installed mee6 or did the lamual installation. 
-
-First run,
->rm /etc/nginx/sites-enabled/default
-
-Then to configure the final step you need to run,
->nano /etc/nginx/sites-enabled/default
-
-Then you need to paste,
-
-
-    server {
-        listen 80;
-        server_name www.example.com example.com;
-        root /var/www/html/;
-
-        location / {
-            proxy_pass http://localhost:5000/;
-            include /etc/nginx/proxy_params;
-        }
-
-    }
-
-Now save and exit.
-(To exit, press Control-X, then Y then Enter.)
-
-Now run,
->service nginx restart
-
-Now your website is accessable using your local ip address of your device.
-To make it accessable to the outside world you must port forward. Visit this website for help on port fowarding.
-https://portforward.com/router.htm
-
-If you have a domain you can use cloudflare and point your domain at your IP address and make sure you update the config, but other than that it should work!
+# Running Mee6 (on a command line interface)
+**Chat-Bot**
+Run `cd ~/mee6/chat-bot/ && python3 bot.py`, then `bg` and it should start running in the background.
+**Website**
+Run `cd ~/mee6/website/ && python3 app.py`, then `bg` and it should start running in the background.
 
 # Conclusion
 
