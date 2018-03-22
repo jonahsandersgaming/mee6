@@ -99,7 +99,7 @@ server {
             proxy_pass http://localhost:5000/;
             include /etc/nginx/proxy_params;
         }
-    }
+}
 ```
 Now save and exit.
 (To exit, press Control-X, then Y then Enter.)
