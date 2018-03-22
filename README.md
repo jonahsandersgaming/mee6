@@ -1,42 +1,50 @@
+
+
+For this tutorial, we will use a Linux system with `apt` package manager, or a virtual machine with Linux.
+
+NOTE: This only words with Python 3.5 or later, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2 OR PYTHON 3.4**
 For this tutorial, we will use an Ubuntu 14 or up system (or virtual machine).
 This also works for Mint/CentOS/Debian/Raspbian and various linux systems.
 
 NOTE: This only words with Python 3.5/3.6, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2 OR PYTHON 3.4**
 
 You can install automatically or manually, see below.
-# Download and Installation, way 1
+# Manual installation
 
 Install python3 and pip3 and redis:
+
 `apt install python3 python3-pip redis-server`
 
 Then, discord.py:
+
 `python3 -m pip install -U https://github.com/rapptz/discord.py/archive/async.zip#egg=discord.py[voice]`
 
 The next thing we need to do is clone this repo from github:
+
 `git clone https://github.com/jtagt/mee6/`
 
-Install the requirements:
+Then, we need `pip` to install the necessary packages for the website script and the chat script. First, we will install for the website script:
+
 `cd mee6/website && pip3 install -r requirements.txt`
 
-For the `chat-bot`:
+Then we will do the same command, but for the chat script:
+
 `cd ../chat-bot && pip3 install -r requirements.txt`
 
-# Download and Installation, way 2
+# Automatic Installation
 Download `install.sh` from this repo.
 
 Use `chmod` to make the installer executable:
+
 `chmod 755 install.sh`
+
 Then run it:
+
 `./install.sh`
 
-Install the requirements:
->cd mee6/website && pip3 install -r requirements.txt
+You can then remove it with:
 
-For the `chat-bot`:
-
->cd ../chat-bot && pip3 install -r requirements.txt
-
-You can then remove it with `rm install.sh`.
+`rm install.sh`.
 
 # Config
 Now that all the dependencies are installed we can move onto confgiuring some of the variables.
@@ -79,9 +87,11 @@ Login as `root` on boot:
 sudo -i
 
 Then start the bot, go to your mee6 repo location:
+
 `cd ~/mee6/chat-bot/ && python3 bot.py`
 
 Open another instance of Terminal (login as root there too), navigate to the mee6 folder, and execute this python file to start the website:
+
 `cd ~/mee6/website/ && python3 app.py`
 
 Do note that you may have to reboot after closing the website so that it works again, 
