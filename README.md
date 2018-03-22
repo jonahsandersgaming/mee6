@@ -78,8 +78,6 @@ Press Control-V to go to the end of the document (don't remove anything), and pa
 
 # Website Config
 
-# Website
-
 We need to proxy behing nginx to access the site from a mobile device (where browsers don't allow `localhost` links). To do so, we need to edit the nginx config file included in the `nginx` package, which you either installed manually or with the installer.
 
 First remove the default enabled sites on nginx:
