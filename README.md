@@ -96,6 +96,42 @@ Open another instance of Terminal (login as root there too), navigate to the mee
 Do note that you may have to reboot after closing the website so that it works again, 
 as python does not automatically unbind fron the domain.
 
+# Website
+
+Inorder for you to access the site from lets say your mobile device you can't just type in localhost:5000. Therefore we need to proxy behind nginx. To do so we need to configure the config file that you would have installed when you installed mee6 or did the lamual installation. 
+
+First run,
+>rm /etc/nginx/sites-enabled/default
+
+Then to configure the final step you need to run,
+>nano /etc/nginx/sites-enabled/default
+
+Then you need to paste,
+
+server {
+    listen 80;
+    server_name www.example.com example.com;
+    root /var/www/html/;
+
+    location / {
+        proxy_pass http://localhost:5000/;
+        include /etc/nginx/proxy_params;
+    }
+
+}
+
+Now save and exit.
+(To exit, press Control-X, then Y then Enter.)
+
+Now run,
+>service nginx restart
+
+Now your website is accessable using your local ip address of your device.
+To make it accessable to the outside world you must port forward. Visit this website for help on port fowarding.
+https://portforward.com/router.htm
+
+If you have a domain you can use cloudflare and point your domain at your IP address and make sure you update the config, but other than that it should work!
+
 # Conclusion
 
 Sadly, I am unable to find enough source code to make everything work, but I do my best!
