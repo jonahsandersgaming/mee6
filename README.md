@@ -9,9 +9,9 @@ There's nothing wrong with using a virtual machine.
 You can install automatically or manually, see below.
 # Manual installation
 
-Install python3 and pip3 and redis:
+Install python3 and pip3 and redis and nginx:
 
-`apt install python3 python3-pip redis-server`
+`apt install python3 python3-pip redis-server nginx`
 
 Then, discord.py:
 
@@ -34,6 +34,7 @@ Download `install.sh` from this repo.
 
 Use `chmod` to make the installer executable:
 
+
 `chmod 755 install.sh`
 
 Then run it:
@@ -44,7 +45,7 @@ You can then remove it with:
 
 `rm install.sh`.
 
-# Config
+# Alias Config
 Now that all the dependencies are installed we can move onto confgiuring some of the variables.
 
 export REDIS_URL=redis://localhost
@@ -76,10 +77,52 @@ Now do:
 Press Control-V to go to the end of the document (don't remove anything), and paste in these variables. Save and exit.
 (To exit, press Control-X, then Y then Enter.)
 
+# Website Config
+
+# Website
+
+We need to proxy behing nginx to access the site from a mobile device (where browsers don't allow `localhost` links). To do so, we need to edit the nginx config file included in the `nginx` package, which you either installed manually or with the installer.
+
+First remove the default enabled sites on nginx:
+
+`rm /etc/nginx/sites-enabled/default`
+
+Then create it again:
+
+`nano /etc/nginx/sites-enabled/default`
+
+Then paste in (no, nothing wrong with example.com):
+```
+server {
+        listen 80;
+        server_name www.example.com example.com;
+        root /var/www/html/;
+
+        location / {
+            proxy_pass http://localhost:5000/;
+            include /etc/nginx/proxy_params;
+        }
+
+    }
+```
+Now save and exit.
+(To exit, press Control-X, then Y then Enter.)
+
+Now restart the `nginx` service:
+`service nginx restart`
+
+Now, the dashboard is accessible at your internal ip address, which should be something like `192.168.1.xx` or `192.168.x.xx`.
+
+To make it accessable to the outside world you must port forward. Visit this website for help on port fowarding:
+
+https://portforward.com/router.htm
+
+If you have a domain you can use Cloudflare, point your domain at your IP address, and update the config file to host the dashboard on a public domain!
+
 
 # Running Mee6
 
-To smooth out the booting process, I recommend rebooting your machine at this point.
+To smooth out the booting process, reboot your machine at this point. If you don't, the aliases set in `.bashrc` will not work, and the scripts will error out. So reboot.
 
 Login as `root` on boot:
 sudo -i
