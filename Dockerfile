@@ -1,3 +1,4 @@
+FROM ubuntu:14.04
 RUN apt-get install -y git python3-pip redis-server nginx 
 RUN cd ~ && cd mee6/chat-bot && pip3 install --upgrade -r requirements.txt
 RUN cd ~ && cd mee6/website && pip3 install --upgrade -r requirements.txt
