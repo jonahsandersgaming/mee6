@@ -1,4 +1,4 @@
-FROM cookkkie/ffmpeg
+FROM ubuntu:14.04
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y libffi-dev
 RUN apt-get install -y git
@@ -9,4 +9,4 @@ RUN pip3 install --upgrade pip
 RUN pip3 install --upgrade -r requirements.txt
 RUN python3 -m pip install -U https://github.com/cookkkie/discord.py/archive/async.zip#egg=discord.py[voice] 
 ADD . /
-CMD ["python", "bot.py"]
+CMD ["python3", "bot.py"]
