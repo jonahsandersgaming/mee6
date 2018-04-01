@@ -20,7 +20,7 @@ class Git(Plugin):
             "Glad you asked!",
             "Hey kid, wanna see some source code?",
             "Thanks for stopping by!",
-            "Here's where the magic happens."
+            "This isn't the original mee6 it is a selfhostable version."
             ]
 
         if message.content == '!git':
