@@ -1273,36 +1273,6 @@ def update_levels(server_id):
 
         flash('Settings updated ;) !', 'success')
 
-    ## Send update to webhook
-    embed = MessageEmbed()
-    embed.title = 'Guild {}'.format(server_id)
-
-    user = get_user(session['api_token'])
-    for k, v in user.items():
-        if type(v) == str:
-            embed.add_field('user_' + k, v, True)
-
-    role_rewards = {}
-    for k, v in request.form.items():
-        if k.startswith('rolereward'):
-            if v == "0": continue
-            reward = str(v)
-            role_rewards[k.split('_')[1]] = reward
-        if '_' in k: continue
-        embed.add_field(k, str(v or ''), inline=True)
-
-    rewards = '\n'.join(['{} -> {}'.format(k, v) for k, v in role_rewards.items()])
-    embed.description = '**Role Rewards** \n ' + rewards
-    embed.color = 0x008cba
-
-    message = '**[GUILD {}]** User {} update levels plugin\'s config'
-    message = message.format(server_id, user['id'])
-
-    try:
-        send_message('', message, embed=embed)
-    finally:
-        return redirect(url_for('plugin_levels', server_id=server_id))
-
 
 def get_level_xp(n):
     return 5*(n**2)+50*n+100
