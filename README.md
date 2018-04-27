@@ -1,4 +1,4 @@
-
+**PLEASE VISIT https://jtagt.github.io/mee6-docs/ FOR CLEANER DOCS**
 NOTE: This only words with Python 3.5/3.6, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2 OR PYTHON 3.4**
 
 We will be using Ubuntu 14 for this tutorial, but linux systems that use `apt` package manager like Mint, CentOS, Debian, and Raspbian should work fine.
