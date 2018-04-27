@@ -1,0 +1,8 @@
+build:
+  docker:
+    web: website/Dockerfile
+    worker: chat-bot/Dockerfile
+release:
+  run:
+    web: cd ~/mee6/website/ && python3 app.py
+    worker: cd ~/mee6/chat-bot/ && python3 bot.py
