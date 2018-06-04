@@ -1,0 +1,68 @@
+version: '3'
+services:
+  mee6-mongo:
+    container_name: mee6-mongo
+    image: mongo
+    ports: 
+      - 27017:27017
+    env_file:
+     - .env
+  mee6-redis:
+    container_name: mee6-redis
+    image: redis
+    ports: 
+      - 6379:6379
+    env_file:
+     - .env
+  # mee6-carbonitex:
+    # container_name: mee6-carbonitex
+    # hostname: mee6-carbonitex
+    # build: 
+    #   context: ./carbonitex-agent
+    # image: mee6bot/carbonitex
+    # env_file:
+    #  - .env
+  mee6-chat:
+    container_name: mee6-chat
+    hostname: mee6-chat
+    build: 
+      context: ./chat-bot
+    image: mee6bot/chat-bot
+    env_file:
+     - .env
+  mee6-indexer:
+    container_name: mee6-indexer
+    hostname: mee6-indexer
+    build: 
+      context: ./message-indexer
+    image: mee6bot/indexer
+    env_file:
+     - .env
+  mee6-twitch:
+    container_name: mee6-twitch
+    hostname: mee6-twitch
+    build: 
+      context: ./streamers
+      dockerfile: ./Dockerfile-twitch
+    image: mee6bot/twitch
+    env_file:
+     - .env
+  mee6-hitbox:
+    container_name: mee6-hitbox
+    hostname: mee6-hitbox
+    build: 
+      context: ./streamers
+      dockerfile: ./Dockerfile-hitbox
+    image: mee6bot/hitbox
+    env_file:
+     - .env
+  mee6-website:
+    container_name: mee6-website
+    hostname: mee6-website
+    build: 
+      context: ./website
+    image: mee6bot/website
+    ports: 
+      - 5000:5000
+    env_file:
+     - .env
