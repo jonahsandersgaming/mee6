@@ -30,12 +30,9 @@ Then we will do the same command, but for the chat script:
 `cd ../chat-bot && pip3 install -r requirements.txt`
 
 # Automatic Installation
-Download `install.sh` from this repo.
+Clone the this repo and follow the intrustions below.
 
-Use `chmod` to make the installer executable:
-
-
-`chmod 755 install.sh`
+You have to go into the downloaded mee6 directory and execute the following.
 
 Then run it:
 
