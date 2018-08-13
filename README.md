@@ -1,10 +1,12 @@
 **PLEASE VISIT https://jtagt.github.io/mee6-docs/ FOR CLEANER DOCS**
 
+Need help? We have a support server! https://discord.gg/WD4pssB
+
 NOTE: This only words with Python 3.5/3.6, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2 OR PYTHON 3.4**
 
-We will be using Ubuntu 14 for this tutorial, but linux systems that use `apt` package manager like Mint, CentOS, Debian, and Raspbian should work fine.
+We will be using Ubuntu 18 for this tutorial, but linux systems that use `apt` package manager like Mint, CentOS, Debian, and Raspbian should work fine.
 
-There's nothing wrong with using a virtual machine.
+There's nothing wrong with using a virtual machine, or WSL (Windows Subsystem for Linux).
 
 You can install automatically or manually, see below.
 # Manual installation
@@ -108,10 +110,11 @@ If you have a domain you can use Cloudflare, point your domain at your IP addres
 
 # Running Mee6
 
-To smooth out the booting process, reboot your machine at this point. If you don't, the aliases set in `.bashrc` will not work, and the scripts will error out. So reboot.
+At this point, the aliases set in `.bashrc` will need to be active. For that to happen, `bash` must be restarted. This can mean closing and reopening your SSH session, closing and opening your terminal emulator, or simply rebooting. If you are extra paranoid and would like things as smooth as possible, the latter is probably the best idea.
 
-Login as `root` on boot:
-sudo -i
+Oce you get back to a shell, drop to a root prompt.
+
+`sudo -i`
 
 Then start the bot, go to your mee6 repo location:
 
@@ -126,9 +129,9 @@ as python does not automatically unbind from the port.
 
 # Running Mee6 (on a command line interface)
 **Chat-Bot**
-Run `cd ~/mee6/chat-bot/ && python3 bot.py`, then `bg` and it should start running in the background.
+Run `cd ~/mee6/chat-bot/ && python3 bot.py`. Hit Control and Z, then type bg.
 **Website**
-Run `cd ~/mee6/website/ && python3 app.py`, then `bg` and it should start running in the background.
+Run `cd ~/mee6/website/ && python3 app.py`. Hit Control and Z, then type bg.
 
 # Conclusion
 
