@@ -48,15 +48,15 @@ You can then remove it with:
 Now that all the dependencies are installed we can move onto confgiuring some of the variables.
 ```
 export REDIS_URL=redis://localhost
-export OAUTH2_CLIENT_ID=Discord client ID for your bot
-export OAUTH2_CLIENT_SECRET=your Discord bot's client secret
-export MEE6_TOKEN=Your Discord bot token
-export OAUTH2_REDIRECT_URI=http://localhost:5000/confirm_login (change to your domain if needed.)
-export MAL_USERNAME=username for account on http://myanimelist.net
-export MAL_PASSWORD=password for above site
-export TWITCH_CLIENT_ID=client ID for a twitch app
-export GOOGLE_API_KEY=a youtube api key
-export SECRET_KEY=1111 ***Change to a longer code, preferably longer than this***
+export OAUTH2_CLIENT_ID=#Discord client ID for your bot
+export OAUTH2_CLIENT_SECRET=#your Discord bot's client secret
+export MEE6_TOKEN=#Your Discord bot token
+export OAUTH2_REDIRECT_URI=http://localhost:5000/confirm_login #change to your domain if needed
+export MAL_USERNAME=#username for account on http://myanimelist.net
+export MAL_PASSWORD=#password for above site
+export TWITCH_CLIENT_ID=#client ID for a twitch app
+export GOOGLE_API_KEY=#a youtube api key
+export SECRET_KEY=1111 #***Change to a longer code, security is important***
 ```
 If you are fine with not having some features work, simply remove the variable value and leave the empty assignment.
 
@@ -70,17 +70,17 @@ Press Control-V to go to the end of the document (don't remove anything), and **
 
 # Website Config
 
-We need to proxy behing nginx to access the site from a mobile device (where browsers cannot access something thats only avaliable to that machine). To do so, we need to edit the nginx config file included in the `nginx` package, which you either installed manually or with the installer.
+We need to proxy behind `nginx` to be able to access the site from a mobile device (where browsers cannot access `localhost` pages). To do so, we need to edit the nginx config file.
 
-First remove the default enabled sites on nginx:
+First, clear the default enabled sites on nginx:
 
-`rm /etc/nginx/sites-enabled/default`
+`> /etc/nginx/sites-enabled/default`
 
-Then create it again:
+Then, edit it:
 
 `nano /etc/nginx/sites-enabled/default`
 
-Then paste in (no, nothing wrong with example.com):
+Then paste in (change example.com to your domain if needed):
 ```
 server {
         listen 80;
@@ -101,18 +101,18 @@ Now restart the `nginx` service:
 
 Now, the dashboard is accessible at your machines local ip address, which should be something like `192.168.1.xx` or `192.168.x.xx`.
 
-To make it accessable to the outside world you must port forward. Visit this website for help on port fowarding:
+To make it accessible to the outside world you must port forward. Visit this website for help on port fowarding:
 
 https://portforward.com/router.htm
 
 If you have a domain you can use Cloudflare, point your domain at your IP address, and update the config file to host the dashboard on a public domain!
 
 
-# Running Mee6
+# Running Mee6 (desktop/SSH)
 
 At this point, the aliases set in `.bashrc` will need to be active. For that to happen, `bash` must be restarted. This can mean closing and reopening your SSH session, closing and opening your terminal emulator, or simply rebooting. If you are extra paranoid and would like things as smooth as possible, the latter is probably the best idea.
 
-Oce you get back to a shell, drop to a root prompt.
+Once you get back to a shell, drop to a root prompt.
 
 `sudo -i`
 
@@ -120,14 +120,14 @@ Then start the bot, go to your mee6 repo location:
 
 `cd ~/mee6/chat-bot/ && python3 bot.py`
 
-Open another instance of Terminal (login as root there too), navigate to the mee6 folder, and execute this python file to start the website:
+Open another instance of Terminal/SSH (login as root there too), navigate to the mee6 folder, and execute this python file to start the website:
 
 `cd ~/mee6/website/ && python3 app.py`
 
 Do note that you may have to reboot after closing the website so that it works again, 
 as python does not automatically unbind from the port.
 
-# Running Mee6 (on a command line interface)
+# Running Mee6 (command line)
 **Chat-Bot**
 Run `cd ~/mee6/chat-bot/ && python3 bot.py`. Hit Control and Z, then type bg.
 **Website**
@@ -135,7 +135,8 @@ Run `cd ~/mee6/website/ && python3 app.py`. Hit Control and Z, then type bg.
 
 # Conclusion
 
-Sadly, I am unable to find enough source code to make everything work, but I do my best!
-If you find any issues please feel free to open an issue!
+Sadly, not enough source code is available to make everything work, but I do my best!
+If you find any problems, please join our dedicated Discord server, link at the top of this document.
+
 PLEASE NOTE: Not all features may work as this repo is in the process of being updated.
 
