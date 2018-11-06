@@ -2,18 +2,18 @@
 
 Need help? We have a support server! https://discord.gg/WD4pssB
 
-NOTE: This only words with Python 3.5/3.6, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2 OR PYTHON 3.4**
+NOTE: This only words with Python <= 3.5, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2.x OR PYTHON 3.4**
 
 We will be using Ubuntu 18 for this tutorial, but linux systems that use `apt` package manager like Mint, CentOS, Debian, and Raspbian should work fine.
 
-There's nothing wrong with using a virtual machine, or WSL (Windows Subsystem for Linux).
+VMs (Virtual Machines) are fine, but WSL (Windows Subsystem to Linux, if you don't already use it don't try) is not recommended.
 
 You can install automatically or manually, see below.
 # Manual installation
 
-Install python3, pip3, redis, and nginx:
+Install python3, pip3, redis, nginx, and git (if you haven't already):
 
-`apt install -y python3 python3-pip redis-server nginx`
+`apt install -y python3 python3-pip redis-server nginx git`
 
 Then, discord.py:
 
@@ -32,11 +32,10 @@ Then we will do the same command, but for the chat script:
 `cd ../chat-bot && pip3 install -r requirements.txt`
 
 # Automatic Installation
-Clone the this repo and follow the intrustions below.
 
-You have to go into the downloaded mee6 directory and execute the following.
+Clone this repo (obviously have `git` installed first) and `cd` into it.
 
-Then run it:
+Then run the installer (feel free to read it first):
 
 `./install.sh`
 
