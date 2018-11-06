@@ -2,7 +2,7 @@
 
 Need help? We have a support server! https://discord.gg/WD4pssB
 
-NOTE: This only words with Python <= 3.5, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2.x OR PYTHON 3.4**
+NOTE: This only words with Python >= 3.5, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2.x OR PYTHON 3.4**
 
 We will be using Ubuntu 18 for this tutorial, but linux systems that use `apt` package manager like Mint, CentOS, Debian, and Raspbian should work fine.
 
