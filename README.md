@@ -6,9 +6,11 @@ Update: It looks like we're the official selfhosting repo for MEE6! Hope to see 
 
 NOTE: This only words with Python >= 3.5, but we will use Python 3.5. **DOES NOT WORK WITH PYTHON 2.x OR PYTHON 3.4**
 
+Yes, this version of Mee6 works with `discord.py` async. No, it likely will not be migrated. Yes, we will nonetheless try our best to support your efforts to host this bot.
+
 We will assume you use `bash` for this tutorial, but Linux systems that use `apt` as a package manager like Mint, CentOS, Debian, and Raspbian should work fine.
 
-VMs (Virtual Machines) are fine, but WSL (Windows Subsystem for Linux, if you don't already use it don't try) is not recommended.
+VMs (Virtual Machines) are fine, but WSL 1 (Windows Subsystem for Linux, if you don't already use it don't try) is not recommended.
 
 You can install automatically or manually, see below.
 
